@@ -1,0 +1,458 @@
+
+//Création des grilles du joueur et de l'ordi de la partie
+int [][] grilleadverse = new int [12][12];
+
+ // Dimensions de l'image
+ int hauteur = getHeight();
+
+int largeur = getWidth();
+
+// On crée les tableaux pour colorier l'image
+int[][] tabRouge = new int[hauteur][largeur];
+
+int[][] tabVert = new int[hauteur][largeur];
+
+int[][] tabBleu = new int[hauteur][largeur];
+
+void main() {
+   clear();
+   //On remplit le tableau avec des 0
+    for (int ia =0; ia <12; ia ++) {
+      for (int ja =0; ja <12; ja ++) {
+         grilleadverse[ia][ja] = 0;
+      }
+   }
+   String nom = "eau";
+   String format = "." + "jpg";
+   /*
+    * Chargement de l'image
+    *  load("file://./images/" + nom + format, false);
+    */
+    //load("file:///P:/Pictures/" + nom + format, false);
+    load(nom + format, false);
+   /*
+    *  On place les composantes RVB des pixels dans trois tableaux
+    */
+    tabRouge = imageCouleurDonneTableau(0);
+   tabVert = imageCouleurDonneTableau(1);
+   tabBleu = imageCouleurDonneTableau(2);
+   //On modifie les composantes des tableaux pour tracer une bande horizontale noire
+    // On trace les lignes horizontales
+    for (int i =0; i <5; i ++) {
+      for (int j =0; j < largeur; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =50; i <55; i ++) {
+      for (int j =0; j < largeur; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =100; i <105; i ++) {
+      for (int j =0; j < largeur; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =150; i <155; i ++) {
+      for (int j =0; j < largeur; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =200; i <205; i ++) {
+      for (int j =0; j < largeur; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =250; i <255; i ++) {
+      for (int j =0; j < largeur; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =300; i <305; i ++) {
+      for (int j =0; j < largeur; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =350; i <355; i ++) {
+      for (int j =0; j < largeur; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =400; i <405; i ++) {
+      for (int j =0; j < largeur; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =450; i <455; i ++) {
+      for (int j =0; j < largeur; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =495; i <500; i ++) {
+      for (int j =0; j < largeur; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   //On modifie les composantes des tableaux pour tracer une bande verticale noire
+    //On trace les lignes verticales
+    for (int i =0; i < hauteur; i ++) {
+      for (int j =0; j < 5; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =0; i < hauteur; i ++) {
+      for (int j =50; j < 55; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =0; i < hauteur; i ++) {
+      for (int j =100; j < 105; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =0; i < hauteur; i ++) {
+      for (int j =150; j < 155; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =0; i < hauteur; i ++) {
+      for (int j =200; j < 205; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =0; i < hauteur; i ++) {
+      for (int j =250; j < 255; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =0; i < hauteur; i ++) {
+      for (int j =300; j < 305; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =0; i < hauteur; i ++) {
+      for (int j =350; j < 355; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =0; i < hauteur; i ++) {
+      for (int j =400; j < 405; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =0; i < hauteur; i ++) {
+      for (int j =450; j < 455; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+   for (int i =0; i < hauteur; i ++) {
+      for (int j =495; j < 500; j ++) {
+         tabRouge[i][j] =0;
+         tabVert[i][j] =0;
+         tabBleu[i][j] =0;
+      }
+   }
+
+   // On place les bateaux
+   bateau4ordi();
+   bateau3ordi();
+   bateau3ordi();
+   bateau2ordi();
+   bateau2ordi();
+
+   // On affiche l'image
+   tableauRGBDonneImageCouleur(tabRouge, tabVert, tabBleu);
+
+   // Annonce des règles
+   println("Vous avez 50 tour pour détruire les bateaux cachés sur cette grille, bonne chance.");
+   println("Il y a 5 bateaux : 2 de deux cases, 2 de trois cases et 1 de quatre cases.");
+   println("Blanc = à l'eau.");
+   println("Rouge = touché.");
+   println("Noir = coulé.");
+   sleep(5000);
+   
+   // Boucle for contenant tous les tours de jeu
+    for (int ii =0; ii <50; ii ++) {
+      sleep(1000);
+      attaque();
+      tableauRGBDonneImageCouleur(tabRouge, tabVert, tabBleu);
+   }
+   clear();
+   println("Fin de la partie !");
+}
+
+//Fonction qui permet de retourner true si le placement du batau est possible et false sinon
+ boolean verifieBateau3(int x, int y, int orientation) {
+   boolean possible = true;
+   if (orientation ==1) {
+      if (x >8) {
+         possible = false;
+      } else {
+         for (int i1 =0; i1 < 3; i1 ++) {
+            if (grilleadverse[x + i1][y] >0) {
+               possible = false;
+            }
+         }
+      }
+   } else {
+      if (y >8) {
+         possible = false;
+      } else {
+         for (int i1 =0; i1 < 3; i1 ++) {
+            if (grilleadverse[x][y + i1] >0) {
+               possible = false;
+            }
+         }
+      }
+   }
+   return  possible;
+}
+
+boolean verifieBateau2(int x, int y, int orientation) {
+   boolean possible = true;
+   if (orientation ==1) {
+      if (x >9) {
+         possible = false;
+      } else {
+         for (int i1 =0; i1 < 2; i1 ++) {
+            if (grilleadverse[x + i1][y] >0) {
+               possible = false;
+            }
+         }
+      }
+   } else {
+      if (y >9) {
+         possible = false;
+      } else {
+         for (int i1 =0; i1 < 2; i1 ++) {
+            if (grilleadverse[x][y + i1] >0) {
+               possible = false;
+            }
+         }
+      }
+   }
+   return  possible;
+}
+
+boolean verifieBateau4(int x, int y, int orientation) {
+   boolean possible = true;
+   if (orientation ==1) {
+      if (x >7) {
+         possible = false;
+      } else {
+         for (int i1 =0; i1 < 4; i1 ++) {
+            if (grilleadverse[x + i1][y] >0) {
+               possible = false;
+            }
+         }
+      }
+   } else {
+      if (y >7) {
+         possible = false;
+      } else {
+         for (int i1 =0; i1 < 4; i1 ++) {
+            if (grilleadverse[x][y + i1] >0) {
+               possible = false;
+            }
+         }
+      }
+   }
+   return  possible;
+}
+
+//Permet au joueur d'attaquer une coordonnée du tableau
+ void attaque() {
+   int x = 0;
+   int y =0;
+   while (x <1 || x >10) {
+      x = readInteger("Choisissez la ligne à attaquer (rentrer un nombre entre 1 et 10 inclus)");
+   }
+   while (y <1 || y >10) {
+      y = readInteger("Choisissez la colonne à attaquer (rentrer un nombre entre 1 et 10 inclus)");
+   }
+   if (grilleadverse[x][y] >0) {
+      // Colorier la case en rouge = touché
+       cases(tabRouge, tabVert, tabBleu, x *50 -45, y *50 -45, 255, 0, 0);
+      if ( ! (grilleadverse[x -1][y] == grilleadverse[x][y] || grilleadverse[x +1][y] == grilleadverse[x][y] || grilleadverse[x ][y -1] == grilleadverse[x][y] || grilleadverse[x][y + 1] == grilleadverse[x][y])) {
+         // Colorier la case en noir = coulé
+          cases(tabRouge, tabVert, tabBleu, x *50 -45, y *50 -45, 0, 0, 0);
+      }
+   } else {
+      // A l'eau ! Colorier la case en blanc
+       cases(tabRouge, tabVert, tabBleu, x *50 -45, y *50 -45, 255, 255, 255);
+   }
+   grilleadverse[x][y] =0;
+}
+
+//Permet de placer les bateaux de 3 cases de l'ordinateur
+ void bateau3ordi() {
+   boolean batpossible;
+   int batx, baty, batorientation;
+   do {
+      batx = random(1, 10);
+      baty = random(1, 10);
+      batorientation = random(1, 3);
+      batpossible = verifieBateau3(batx, baty, batorientation);
+   }
+   while ( ! batpossible || batx <1 || batx >10 || baty <1 || baty >10);
+   if (batorientation == 1) {
+      for (int i1 =0; i1 <3; i1 ++) {
+         grilleadverse[batx + i1][baty] = 3;
+      }
+   } else {
+      for (int i2 =0; i2 <3; i2 ++) {
+         grilleadverse[batx][baty + i2] = 3;
+      }
+   }
+}
+
+//Permet de placer les bateaux de 2 cases de l'ordi
+ void bateau2ordi() {
+   boolean batpossible;
+   int batx, baty, batorientation;
+   do {
+      batx = random(1, 10);
+      baty = random(1, 10);
+      batorientation = random(1, 3);
+      batpossible = verifieBateau2(batx, baty, batorientation);
+   }
+   while ( ! batpossible || batx <1 || batx >10 || baty <1 || baty >10);
+   if (batorientation == 1) {
+      for (int i1 =0; i1 <2; i1 ++) {
+         grilleadverse[batx + i1][baty] = 2;
+      }
+   } else {
+      for (int i2 =0; i2 <2; i2 ++) {
+         grilleadverse[batx][baty + i2] = 2;
+      }
+   }
+}
+
+//Permet de placer les bateaux de 4 cases de l'ordi
+ void bateau4ordi() {
+   boolean batpossible;
+   int batx, baty, batorientation;
+   do {
+      batx = random(1, 10);
+      baty = random(1, 10);
+      batorientation = random(1, 3);
+      batpossible = verifieBateau4(batx, baty, batorientation);
+   }
+   while ( ! batpossible || batx <1 || batx >10 || baty <1 || baty >10);
+   if (batorientation == 1) {
+      for (int i1 =0; i1 <4; i1 ++) {
+         grilleadverse[batx + i1][baty] = 4;
+      }
+   } else {
+      for (int i2 =0; i2 <4; i2 ++) {
+         grilleadverse[batx][baty + i2] = 4;
+      }
+   }
+}
+
+// Procédure permettant d'afficher une image à partir d'un tableau
+void tableauDonneImage(int tab[][]) {
+   int largeur = tab[0].length;
+   int hauteur = tab.length;
+   // On travaille en coordonnés non centrées (false)!
+    // lors de l'initialisation de l'image "reset"
+    reset(largeur, hauteur, false);
+   for (int y = 0; y < hauteur; y ++) {
+      for (int x = 0; x < largeur; x ++) {
+         setPixel(x, y, tab[y][x]);
+      }
+   }
+}
+
+// Fonction permettant de placer les valeurs de pixels 
+// (niveaux de gris) de l'image dans un tableau
+int[][] imageDonneTableau() {
+   int[][] tab = new int[getHeight()][getWidth()];
+   for (int i = 0; i < tab.length; i ++) {
+      for (int j = 0; j < tab[0].length; j ++) {
+         tab[i][j] = getPixel(j, i);
+      }
+   }
+   return  tab;
+}
+
+// Procédure permettant d'afficher une image couleur à partir 
+// des tableaux rouge, vert et bleu 
+void tableauRGBDonneImageCouleur(int tabR[][], int tabV[][], int tabB[][]) {
+   int largeur = tabR[0].length;
+   int hauteur = tabR.length;
+   // On travaille en coordonnées non centrées (false)!
+    // lors de l'initialisation de l'image "reset"
+    reset(largeur, hauteur, false);
+   for (int y = 0; y < hauteur; y ++) {
+      for (int x = 0; x < largeur; x ++) {
+         setPixel(x, y, tabR[y][x], tabV[y][x], tabB[y][x]);
+      }
+   }
+}
+
+// Fonction permettant de placer les valeurs de pixels ROUGES 
+// (n = 0), VERTS (n = 1) ou BLEUS (n = 2)
+// de l'image dans un tableau
+int[][] imageCouleurDonneTableau(int n) {
+   int[][] tab = new int[getHeight()][getWidth()];
+   for (int i = 0; i < tab.length; i ++) {
+      for (int j = 0; j < tab[0].length; j ++) {
+         tab[i][j] = getPixelColor(j, i)[n];
+      }
+   }
+   return  tab;
+}
+
+void cases(int tabR[][], int tabV[][], int tabB[][], int l, int c, int r, int v, int b) {
+   // coloriage d'une case
+    for (int i = l; i < l +45; i ++) {
+      for (int j = c; j < c +45; j ++) {
+         tabR[i][j] = r;
+         tabV[i][j] = v;
+         tabB[i][j] = b;
+      }
+   }
+}
